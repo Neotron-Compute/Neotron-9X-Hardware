@@ -1,0 +1,40 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP +VDDBU
+D Power symbol creates a global label with name "+VDDBU"
+K power-flag
+$ENDCMP
+#
+$CMP +VDDCORE
+D Power symbol creates a global label with name "+VDDCORE"
+K power-flag
+$ENDCMP
+#
+$CMP +VDDIN33
+D Power symbol creates a global label with name "+VDDIN33"
+K power-flag
+$ENDCMP
+#
+$CMP +VDDIOM
+D Power symbol creates a global label with name "+VDDIOM"
+K power-flag
+$ENDCMP
+#
+$CMP +VDDOUT25
+D Power symbol creates a global label with name "+VDDOUT25"
+K power-flag
+$ENDCMP
+#
+$CMP SAM9X60D1G
+D ARM926EJ-S MPU, 1024 Mbit DDR, 600MHz, 112 GPIO, TFBGA-233
+K SAM9 SAM9X60 SIP ARM9
+F http://ww1.microchip.com/downloads/en/DeviceDoc/SAM9X60-SIP-DataSheet-DS60001580B.pdf
+$ENDCMP
+#
+$CMP SAM9X60D5M
+D ARM926EJ-S MPU, 512 Mbit DDR, 600MHz, 112 GPIO, TFBGA-233
+K SAM9 SAM9X60 SIP ARM9
+F http://ww1.microchip.com/downloads/en/DeviceDoc/SAM9X60-SIP-DataSheet-DS60001580B.pdf
+$ENDCMP
+#
+#End Doc Library
