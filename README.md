@@ -10,25 +10,35 @@ If the Neotron 32 was like a BBC Micro, or a ZX Spectrum, then the Neotron 9X is
 
 ## Hardware
 
-  - **CPU:** Microchip SAM9X60D5M System-in-Packet
+  - **CPU:** Microchip SAM9X60D5M System-in-Package
   - **Processor Core**: 600 MHz ARM926EJ-S
      - 32 KiB Instruction Cache
      - 32 KiB Data Cache
      - Memory Management Unit
   - **RAM:** 64 MiB on-package DDR2
      - Also has 64 KiB on-die SRAM
-  - **ROM:** Hard-coded on-chip 64 KiB boot-ROM
-     - BIOS is loaded from "boot.bin" on SD-Card, like an Amiga 1000 loads Kickstart from floppy disk.
+  - **ROM:** 256 KiB Serial Flash
+     - Can load BIOS from "boot.bin" on SD-Card, like an Amiga 1000 loads Kickstart from floppy disk
+     - Can also load BIOS into RAM from Serial Flash
   - **GPU:** Microchip SAM9 LCD Controller
      - 1024x768 resolution maximum
+     - Three hardware overlays with transparency
+     - Hardware scaling
   - **GPU RAM:** Shared with main SDRAM
-  - **Video Output:** SVGA (up to 1024x768)
+  - **Video Output:** SVGA
+    - Nominally 800x600 in 256 colours (from a pallette of 262,144) at 60 Hz
+    - Other resolutions TBD (pixel clock is limited to integer divisors of system clock)
   - **Storage:** SD Card slot, supports FAT16/FAT32 and MS-DOS partition tables
-  - **USB:** 2x USB 2.0 Full-speed Type-A Host ports
-  - **Audio:** 3.5mm stereo Line Out
+  - **USB:** 1x external USB 2.0 Full-speed Type-A Host ports (with a header for two more)
+  - **Audio:** 16-bit 48 kHz stereo
+    - Wolfson WM8731 Audio CODEC
+    - 3.5mm stereo Line Out
+    - 3.5mm stereo Amplified headphone output
+    - Digital volume control
   - **Keyboard/Mouse:** 2x PS/2 Ports (2x 6-pin mini-DIN)
   - **MIDI**: MIDI In and MIDI Out (2x 5-pin 180-degree DIN)
   - **Serial**: RS-232 on 10-pin 2.54mm header suitable for DE-9 plug on IDC ribbon
+  - **Ethernet**: Standard 100base-TX RJ45 port.
   - **Parallel**: 3.3v PC-style Parallel Port with DB-25 port
      - Also functions as 3.3v GPIO with 12 outputs and 4 inputs.
   - **Joystick**: 2x 9-pin game ports
@@ -42,19 +52,18 @@ If the Neotron 32 was like a BBC Micro, or a ZX Spectrum, then the Neotron 9X is
 ## Parts Required
 
   - **PCBA**: Load the [Neotron-9X schematic](./Kicad/neotron-9x.sch) in Kicad, or see the [Neotron-9X Release Area] on Github for PDFs, Gerbers and a CSV bill-of-materials.
-     - TBD: We might put the SIP on a smaller 4-layer or 6-layer board which we will load with the surface mount parts (like the BGA), and allow you to make/buy the bare motherboard which takes all through-hole parts.
+     - TBD: We might put the SiP on a smaller 4-layer or 6-layer board which we will load with the other surface mount parts (like the power management unit), and allow you to make/buy the bare motherboard which takes all through-hole parts or chunky SSOP/TSSOP surface mount parts.
   - **Case**: Hammond [1598D], in your choice of colour. The case will include mounting screws, feet and two un-cut end panels.
-  - **End panels**: TBD. We'll probably supply those as Gerbers so you can make end panels at your favourite PCB fab house
-  - **SD Card**: Any SD SDHC card should work.
-  - **Monitor**: You will need monitor with 15-pin VGA input.
+  - **End panels**: TBD. We'll probably supply those as Gerbers so you can make end panels at your favourite PCB fab house at the same time you order the main PCB(s).
+  - **SD Card**: Any SD or SDHC card should work.
+  - **Monitor**: You will need monitor with 15-pin VGA input. The nominal resolution is 800 by 600 at 60 Hz (with a 40.00 MHz pixel clock), so an older 4:3 aspect ratio screen is best.
   - **Power Supply**: You need a standard mobile phone charger or other USB power source, and a standard USB A to B cable (like you would use for a USB printer). System requires 500mA minimum.
-  - **Ribbon cables**: The DE9 RS-232 Serial port requires a 2.54mm pin header to D-Sub ribbon cable. You can scavenge one from an old PC, or buy them new from Amazon, eBay or AliExpress for a few UK pounds.
+  - **Ribbon cables**: The DE9 RS-232 Serial port requires a 2.54mm pin header to D-Sub ribbon cable. You can scavenge one from an old PC, or buy them new from Amazon, eBay or AliExpress for a few UK pounds. _Note: You may find them incorrectly listed as a DB9 connector; a D-Sub B-Shell is the big one used on a IBM PC Parallel Port and larger 25-pin Serial Ports, whilst the 9-pin serial ports are always D-Sub E-Shells_.
   - **Keyboard and Mouse**: Any PS/2 Keyboard and PS/2 Mouse should work.
-  - **Joysticks**: Any Atari-compatible 9-pin digital joystick should work. You can connect up to two at once, for two player gaming. Sega MegaDrive/Genesis controllers should also work (although on the 6-button variant only the main A/B/C/Start buttons will work, not the extra three fire buttons).
-  - **Audio**: The audio output is straight from the CPU and so is pretty weak. We recommend using amplified speakers, or an external headphone amplifier. Connecting headphones directly is untested and may pull too much current from the CPU.
+  - **Joysticks**: Any Atari-compatible 9-pin digital joystick should work and you can connect up to two at once, for two player gaming. Sega MegaDrive/Genesis controllers will also work.
+  - **Audio**: You can plug in headphones to the headphone jack, or amplified speakers to the line-out jack.
   - **MIDI**: If you want to hook up a MIDI Synthesiser like a Roland MT-32, or a MIDI Keyboard, you just need standard 5-pin DIN MIDI cables.
-  - **USB**: You get up to three USB Host ports, although driver support is likely to be very limited.
-  - **Ethernet**: You get a standard 100base-TX RJ45 Ethernet port. The Neotron OS will (hopefully, one day) support standard TCP/IP and DHCP.
+  - **USB**: You have one external on-board USB port - you can use a standard PC case USB header cable if you want to add two more.
 
 You can find a complete BOM (including all the connectors, but excluding the PCBs, case and Serial ribbon cables), on [Octopart]. Gerbers and BOM are also available on [OpenHardware] and [Kitspace]. Don't forget, if you get the Hammond case, you'll need to drill out or mill the endplates yourself to take the connectors.
 
