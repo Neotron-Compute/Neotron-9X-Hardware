@@ -345,7 +345,7 @@
     )
   )
 
-  (module Neotron-9X:BGA-233_17x17_14.0x14.0mm (layer F.Cu) (tedit 5F1BFF70) (tstamp 5F1CEF42)
+  (module Neotron-9X-CPU:BGA-233_17x17_14.0x14.0mm (layer F.Cu) (tedit 5F1BFF70) (tstamp 5F1CEF42)
     (at 140 145)
     (path /5F1BF979)
     (attr smd)

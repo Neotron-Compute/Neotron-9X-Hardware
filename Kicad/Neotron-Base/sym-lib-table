@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Neotron-Base)(type Legacy)(uri ${KIPRJMOD}/Neotron-Base.lib)(options "")(descr ""))
+)

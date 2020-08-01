@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Neotron-9X-CPU)(type KiCad)(uri ${KIPRJMOD}/Neotron-9X-CPU.pretty)(options "")(descr ""))
+)

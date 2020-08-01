@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Neotron-9X)(type Legacy)(uri ${KIPRJMOD}/Neotron-9X-CPU.lib)(options "")(descr ""))
+  (lib (name Neotron-Base)(type Legacy)(uri /home/jonathan/Documents/programming/neotron-compute/Neotron-9X-Hardware/Kicad/Neotron-Base/Neotron-Base.lib)(options "")(descr ""))
+)
