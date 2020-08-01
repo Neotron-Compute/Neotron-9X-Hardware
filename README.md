@@ -21,13 +21,17 @@ If the Neotron 32 was like a BBC Micro, or a ZX Spectrum, then the Neotron 9X is
      - Can load BIOS from "boot.bin" on SD-Card, like an Amiga 1000 loads Kickstart from floppy disk
      - Can also load BIOS into RAM from Serial Flash
   - **GPU:** Microchip SAM9 LCD Controller
-     - 1024x768 resolution maximum
+     - 800x600 resolution (chip supports up to 1024x768 resolution maximum)
+     - Typically 256 colour pallete mode to save Video RAM
+     - Optional 16-bit mode for improved colour depth
      - Three hardware overlays with transparency
      - Hardware scaling
   - **GPU RAM:** Shared with main SDRAM
   - **Video Output:** SVGA
-    - Nominally 800x600 in 256 colours (from a pallette of 262,144) at 60 Hz
+    - Nominally 800x600 at 60 Hz
     - Other resolutions TBD (pixel clock is limited to integer divisors of system clock)
+    - Texas Instruments THS7316 Video Amplifier used to drive 75 ohm VGA output
+    - Triple 6-bit 0.1% R2R DACs, to give max 262,144 (2^18) colours
   - **Storage:** SD Card slot, supports FAT16/FAT32 and MS-DOS partition tables
   - **USB:** 1x external USB 2.0 Full-speed Type-A Host ports (with a header for two more)
   - **Audio:** 16-bit 48 kHz stereo
