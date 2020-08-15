@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 7 10
 Title "Neotron Base - Storage"
-Date "2020-08-07"
+Date "2020-08-15"
 Rev "[Uncontrolled]"
 Comp "github.com/neotron-compute"
 Comment1 "Copyright (c) Jonathan 'theJPster' Pallant 2020"
@@ -13,99 +13,40 @@ Comment2 "CC BY-SA 4.0"
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 5250 3300 0    50   Input ~ 0
-MCU_SPI_MOSI
-Text HLabel 5250 3700 0    50   Output ~ 0
-MCU_SPI_MISO
-Text HLabel 5250 3500 0    50   Input ~ 0
-MCU_SPI_CLK
-Text HLabel 5200 2050 0    50   Input ~ 0
-~MCU_SD_CS
+Text HLabel 4800 3300 0    50   Input ~ 0
+CMD
+Text HLabel 4800 3600 0    50   Input ~ 0
+CLK
+Text HLabel 4800 3200 0    50   BiDi ~ 0
+DAT3
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5DF24158
-P 3650 2350
-F 0 "#PWR?" H 3650 2200 50  0001 C CNN
-F 1 "+3V3" H 3700 2550 50  0000 C CNN
-F 2 "" H 3650 2350 50  0001 C CNN
-F 3 "" H 3650 2350 50  0001 C CNN
-	1    3650 2350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5DF24591
-P 4400 4150
-F 0 "#PWR?" H 4400 3900 50  0001 C CNN
-F 1 "GND" H 4450 3950 50  0000 C CNN
-F 2 "" H 4400 4150 50  0001 C CNN
-F 3 "" H 4400 4150 50  0001 C CNN
-	1    4400 4150
+P 4850 2500
+F 0 "#PWR?" H 4850 2350 50  0001 C CNN
+F 1 "+3V3" H 4900 2700 50  0000 C CNN
+F 2 "" H 4850 2500 50  0001 C CNN
+F 3 "" H 4850 2500 50  0001 C CNN
+	1    4850 2500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5DF25504
-P 7300 4450
-F 0 "#PWR?" H 7300 4200 50  0001 C CNN
-F 1 "GND" H 7350 4250 50  0000 C CNN
-F 2 "" H 7300 4450 50  0001 C CNN
-F 3 "" H 7300 4450 50  0001 C CNN
-	1    7300 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R704
-U 1 1 5DF25D3A
-P 7300 4250
-F 0 "R704" H 7350 4300 50  0000 L CNN
-F 1 "DNF" H 7350 4200 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7230 4250 50  0001 C CNN
-F 3 "~" H 7300 4250 50  0001 C CNN
-F 4 "~" H 0   0   50  0001 C CNN "Manufacturer"
-F 5 "~" H 0   0   50  0001 C CNN "mpn"
-F 6 "1" H 7300 4250 50  0001 C CNN "DNP"
-	1    7300 4250
+P 7400 4150
+F 0 "#PWR?" H 7400 3900 50  0001 C CNN
+F 1 "GND" H 7450 3950 50  0000 C CNN
+F 2 "" H 7400 4150 50  0001 C CNN
+F 3 "" H 7400 4150 50  0001 C CNN
+	1    7400 4150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7300 4400 7300 4450
+	4800 3300 5050 3300
 Wire Wire Line
-	5250 3300 5350 3300
+	4800 3600 5150 3600
 Wire Wire Line
-	5250 3500 5350 3500
-Wire Wire Line
-	5250 3700 5350 3700
-$Comp
-L Device:R R702
-U 1 1 5DF267A9
-P 4050 2700
-F 0 "R702" H 3800 2650 50  0000 L CNN
-F 1 "47k" H 3850 2750 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3980 2700 50  0001 C CNN
-F 3 "~" H 4050 2700 50  0001 C CNN
-F 4 "Stackpole Electronics Inc" H 4050 2700 50  0001 C CNN "Manufacturer"
-F 5 "CF14JT47K0" H 4050 2700 50  0001 C CNN "mpn"
-F 6 "CF14JT47K0CT-ND" H 4050 2700 50  0001 C CNN "digikey#"
-F 7 "0" H 4050 2700 50  0001 C CNN "DNP"
-	1    4050 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R703
-U 1 1 5DF273D3
-P 4400 2700
-F 0 "R703" H 4150 2650 50  0000 L CNN
-F 1 "47k" H 4200 2750 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4330 2700 50  0001 C CNN
-F 3 "~" H 4400 2700 50  0001 C CNN
-F 4 "Stackpole Electronics Inc" H 4400 2700 50  0001 C CNN "Manufacturer"
-F 5 "CF14JT47K0" H 4400 2700 50  0001 C CNN "mpn"
-F 6 "CF14JT47K0CT-ND" H 4400 2700 50  0001 C CNN "digikey#"
-F 7 "0" H 4400 2700 50  0001 C CNN "DNP"
-	1    4400 2700
-	1    0    0    -1  
-$EndComp
+	4800 3800 5250 3800
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5E016A44
@@ -149,145 +90,165 @@ Wire Wire Line
 $Comp
 L Device:R R701
 U 1 1 5E137A31
-P 7150 2050
-F 0 "R701" V 7050 1850 50  0000 L CNN
-F 1 "330" V 7050 2100 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 7080 2050 50  0001 C CNN
-F 3 "~" H 7150 2050 50  0001 C CNN
-F 4 "Stackpole Electronics Inc" H 7150 2050 50  0001 C CNN "Manufacturer"
-F 5 "CF14JT330R" H 7150 2050 50  0001 C CNN "mpn"
-F 6 "CF14JT330RCT-ND" H 7150 2050 50  0001 C CNN "digikey#"
-F 7 "0" H 7150 2050 50  0001 C CNN "DNP"
-	1    7150 2050
+P 5100 4650
+F 0 "R701" V 5000 4450 50  0000 L CNN
+F 1 "330" V 5000 4700 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5030 4650 50  0001 C CNN
+F 3 "~" H 5100 4650 50  0001 C CNN
+F 4 "Stackpole Electronics Inc" H 5100 4650 50  0001 C CNN "Manufacturer"
+F 5 "CF14JT330R" H 5100 4650 50  0001 C CNN "mpn"
+F 6 "CF14JT330RCT-ND" H 5100 4650 50  0001 C CNN "digikey#"
+F 7 "0" H 5100 4650 50  0001 C CNN "DNP"
+	1    5100 4650
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:LED D701
 U 1 1 5E137D7B
-P 7600 2050
-F 0 "D701" H 7593 2266 50  0000 C CNN
-F 1 "Red LED" H 7593 2175 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 7600 2050 50  0001 C CNN
-F 3 "~" H 7600 2050 50  0001 C CNN
-F 4 "Würth Elektronik" H 0   0   50  0001 C CNN "Manufacturer"
-F 5 "151031SS04000" H 0   0   50  0001 C CNN "mpn"
-F 6 "0" H 7600 2050 50  0001 C CNN "DNP"
-	1    7600 2050
+P 5550 4650
+F 0 "D701" H 5543 4866 50  0000 C CNN
+F 1 "Red LED" H 5543 4775 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 5550 4650 50  0001 C CNN
+F 3 "~" H 5550 4650 50  0001 C CNN
+F 4 "Würth Elektronik" H -2050 2600 50  0001 C CNN "Manufacturer"
+F 5 "151031SS04000" H -2050 2600 50  0001 C CNN "mpn"
+F 6 "0" H 5550 4650 50  0001 C CNN "DNP"
+	1    5550 4650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5300 2050 5300 3200
+	5250 4650 5400 4650
 Wire Wire Line
-	5300 3200 5350 3200
+	5700 4650 5950 4650
 Wire Wire Line
-	5200 2050 5300 2050
-Connection ~ 5300 2050
-$Comp
-L 74xx:74LS14 U?
-U 6 1 5E1461D0
-P 5850 2050
-AR Path="/5DF253FB/5E1461D0" Ref="U?"  Part="6" 
-AR Path="/5DF1D0B0/5E1461D0" Ref="U?"  Part="6" 
-AR Path="/5F3C3767/5E1461D0" Ref="U401"  Part="6" 
-F 0 "U401" H 5850 2350 50  0000 C CNN
-F 1 "74LS14" H 5850 2250 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 5850 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 5850 2050 50  0001 C CNN
-F 4 "Texas Instruments;On Shore Technology" H 5850 2050 50  0001 C CNN "Manufacturer"
-F 5 "SN74LS14N;ED14DT" H 5850 2050 50  0001 C CNN "mpn"
-F 6 "0" H 5850 2050 50  0001 C CNN "DNP"
-	6    5850 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS14 U?
-U 5 1 5E1461CA
-P 6550 2050
-AR Path="/5DF253FB/5E1461CA" Ref="U?"  Part="5" 
-AR Path="/5DF1D0B0/5E1461CA" Ref="U?"  Part="5" 
-AR Path="/5F3C3767/5E1461CA" Ref="U401"  Part="5" 
-F 0 "U401" H 6550 2350 50  0000 C CNN
-F 1 "74LS14" H 6550 2250 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6550 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 6550 2050 50  0001 C CNN
-F 4 "Texas Instruments;On Shore Technology" H 6550 2050 50  0001 C CNN "Manufacturer"
-F 5 "SN74LS14N;ED14DT" H 6550 2050 50  0001 C CNN "mpn"
-F 6 "0" H 6550 2050 50  0001 C CNN "DNP"
-	5    6550 2050
-	1    0    0    -1  
-$EndComp
+	5950 4650 5950 4500
 Wire Wire Line
-	5300 2050 5550 2050
-Wire Wire Line
-	6850 2050 7000 2050
-Wire Wire Line
-	7300 2050 7450 2050
-Wire Wire Line
-	7750 2050 8000 2050
-Wire Wire Line
-	8000 2050 8000 1900
-Wire Wire Line
-	6150 2050 6250 2050
-$Comp
-L power:+5V #PWR?
-U 1 1 5E156450
-P 8000 1900
-F 0 "#PWR?" H 8000 1750 50  0001 C CNN
-F 1 "+5V" H 8015 2073 50  0000 C CNN
-F 2 "" H 8000 1900 50  0001 C CNN
-F 3 "" H 8000 1900 50  0001 C CNN
-	1    8000 1900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7300 4000 7300 4100
-$Comp
-L Connector:Micro_SD_Card J?
-U 1 1 5E19DB95
-P 6250 3400
-AR Path="/5E19DB95" Ref="J?"  Part="1" 
-AR Path="/5DF1D0B0/5E19DB95" Ref="J?"  Part="1" 
-AR Path="/5F3C3767/5E19DB95" Ref="J701"  Part="1" 
-F 0 "J701" H 6200 4117 50  0000 C CNN
-F 1 "micro SD Card" H 6200 4026 50  0000 C CNN
-F 2 "Neotron 32:Molex_4730_2651" H 7400 3700 50  0001 C CNN
-F 3 "" H 6250 3400 50  0001 C CNN
-F 4 "Molex" H 0   0   50  0001 C CNN "Manufacturer"
-F 5 "47309-2651" H 0   0   50  0001 C CNN "mpn"
-F 6 "0" H 6250 3400 50  0001 C CNN "DNP"
-	1    6250 3400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5350 3600 4400 3600
-Wire Wire Line
-	4400 3600 4400 4150
-Wire Wire Line
-	7050 4000 7300 4000
+	7250 3700 7400 3700
 Text Notes 550  7700 0    50   Italic 0
 We use a micro-SD card for space reasons. The SD card is driven in SPI mode.
+Text HLabel 4800 3100 0    50   BiDi ~ 0
+DAT2
+Text HLabel 4850 4650 0    50   Input ~ 0
+~DISK_ACT
 Wire Wire Line
-	5350 3100 4400 3100
+	4850 4650 4950 4650
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F38BDAE
+P 5950 4500
+F 0 "#PWR?" H 5950 4350 50  0001 C CNN
+F 1 "+3V3" H 6000 4700 50  0000 C CNN
+F 2 "" H 5950 4500 50  0001 C CNN
+F 3 "" H 5950 4500 50  0001 C CNN
+	1    5950 4500
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4400 3100 4400 2850
+	4800 3100 4850 3100
 Wire Wire Line
-	4050 2850 4050 3800
+	4800 3200 4950 3200
 Wire Wire Line
-	4050 3800 5350 3800
+	4800 3900 5350 3900
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F38D5DD
+P 4400 3350
+F 0 "#PWR?" H 4400 3200 50  0001 C CNN
+F 1 "+3V3" H 4400 3500 50  0000 C CNN
+F 2 "" H 4400 3350 50  0001 C CNN
+F 3 "" H 4400 3350 50  0001 C CNN
+	1    4400 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F38DD62
+P 4500 4000
+F 0 "#PWR?" H 4500 3750 50  0001 C CNN
+F 1 "GND" H 4500 3850 50  0000 C CNN
+F 2 "" H 4500 4000 50  0001 C CNN
+F 3 "" H 4500 4000 50  0001 C CNN
+	1    4500 4000
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	3650 2350 3650 2450
+	4500 3700 4500 4000
+$Comp
+L Connector:SD_Card J701
+U 1 1 5F38E76D
+P 6350 3500
+F 0 "J701" H 6350 4165 50  0000 C CNN
+F 1 "SD_Card" H 6350 4074 50  0000 C CNN
+F 2 "" H 6350 3500 50  0001 C CNN
+F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf" H 6350 3500 50  0001 C CNN
+	1    6350 3500
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	3650 3400 5350 3400
+	4400 3350 4400 3500
 Wire Wire Line
-	4050 2450 4050 2550
+	4500 3400 4500 3700
+Connection ~ 4500 3700
 Wire Wire Line
-	4050 2450 4400 2450
+	4500 3400 5450 3400
 Wire Wire Line
-	4400 2450 4400 2550
-Connection ~ 4050 2450
+	4400 3500 5450 3500
 Wire Wire Line
-	3650 2450 4050 2450
-Connection ~ 3650 2450
+	4500 3700 5450 3700
+Text HLabel 4800 3900 0    50   BiDi ~ 0
+DAT1
+Text HLabel 4800 3800 0    50   BiDi ~ 0
+DAT0
 Wire Wire Line
-	3650 2450 3650 3400
+	7250 3600 7400 3600
+Wire Wire Line
+	7400 3600 7400 3700
+Connection ~ 7400 3700
+Wire Wire Line
+	7400 3700 7400 4150
+NoConn ~ 7250 3400
+NoConn ~ 7250 3300
+$Comp
+L Device:R_Network06 RN701
+U 1 1 5F39B8E5
+P 5150 2750
+F 0 "RN701" H 5438 2796 50  0000 L CNN
+F 1 "6x47k" H 5438 2705 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP7" V 5525 2750 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 5150 2750 50  0001 C CNN
+	1    5150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2950 4850 3100
+Connection ~ 4850 3100
+Wire Wire Line
+	4850 3100 5450 3100
+Wire Wire Line
+	4950 2950 4950 3200
+Connection ~ 4950 3200
+Wire Wire Line
+	4950 3200 5450 3200
+Wire Wire Line
+	5050 2950 5050 3300
+Connection ~ 5050 3300
+Wire Wire Line
+	5050 3300 5450 3300
+Wire Wire Line
+	5150 2950 5150 3600
+Connection ~ 5150 3600
+Wire Wire Line
+	5150 3600 5450 3600
+Wire Wire Line
+	5250 2950 5250 3800
+Connection ~ 5250 3800
+Wire Wire Line
+	5250 3800 5450 3800
+Wire Wire Line
+	5350 2950 5350 3900
+Connection ~ 5350 3900
+Wire Wire Line
+	5350 3900 5450 3900
+Wire Wire Line
+	4850 2500 4850 2550
 $EndSCHEMATC

@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 7
+Sheet 3 10
 Title "Neotron Base - Real Time Clock"
-Date "2020-08-07"
+Date "2020-08-15"
 Rev "[Uncontrolled]"
 Comp "github.com/neotron-compute"
 Comment1 "Copyright (c) Jonathan 'theJPster' Pallant 2020"
@@ -65,8 +65,8 @@ U 1 1 5E0203CB
 P 7050 3350
 AR Path="/5DF1D0B0/5E0203CB" Ref="C?"  Part="1" 
 AR Path="/5DF66898/5E0203CB" Ref="C?"  Part="1" 
-AR Path="/5F3C1328/5E0203CB" Ref="C302"  Part="1" 
-F 0 "C302" H 7165 3396 50  0000 L CNN
+AR Path="/5F3C1328/5E0203CB" Ref="C303"  Part="1" 
+F 0 "C303" H 7165 3396 50  0000 L CNN
 F 1 "100n" H 7165 3305 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 7088 3200 50  0001 C CNN
 F 3 "~" H 7050 3350 50  0001 C CNN
@@ -203,10 +203,10 @@ F 6 "0" H 5550 2950 50  0001 C CNN "DNP"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C303
+L Device:C C302
 U 1 1 5E02CC31
 P 5550 3750
-F 0 "C303" H 5665 3796 50  0000 L CNN
+F 0 "C302" H 5665 3796 50  0000 L CNN
 F 1 "6p" H 5665 3705 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 5588 3600 50  0001 C CNN
 F 3 "~" H 5550 3750 50  0001 C CNN

@@ -1,3 +1,12 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP Neotron-CPU-Card
+D Represents a generic Neotron CPU card, as seen from (and used on) a Neotron Baseboard. An "output" here means a signal coming from the CPU card going to the base-board.
+$ENDCMP
+#
+$CMP THS7316
+D Texas Instruments HD Video Buffer
+F https://www.ti.com/lit/ds/symlink/ths7316.pdf
+$ENDCMP
+#
 #End Doc Library

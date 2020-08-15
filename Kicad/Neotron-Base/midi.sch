@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 4 10
 Title "Neotron Base"
-Date "2020-08-07"
+Date "2020-08-15"
 Rev "[Uncontrolled]"
 Comp "github.com/neotron-compute"
 Comment1 "Copyright (c) Jonathan 'theJPster' Pallant 2020"
@@ -150,10 +150,10 @@ F 6 "0" H 4250 3650 50  0001 C CNN "DNP"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R403
+L Device:R R402
 U 1 1 5E03331E
 P 3200 3300
-F 0 "R403" V 2993 3300 50  0000 C CNN
+F 0 "R402" V 2993 3300 50  0000 C CNN
 F 1 "220" V 3084 3300 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3130 3300 50  0001 C CNN
 F 3 "~" H 3200 3300 50  0001 C CNN
@@ -165,10 +165,10 @@ F 7 "0" H 3200 3300 50  0001 C CNN "DNP"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R402
+L Device:R R403
 U 1 1 5E0339B9
 P 3300 2650
-F 0 "R402" V 3093 2650 50  0000 C CNN
+F 0 "R403" V 3093 2650 50  0000 C CNN
 F 1 "220" V 3184 2650 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 3230 2650 50  0001 C CNN
 F 3 "~" H 3300 2650 50  0001 C CNN
@@ -180,10 +180,10 @@ F 7 "0" H 3300 2650 50  0001 C CNN "DNP"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R404
+L Device:R R405
 U 1 1 5E03403F
 P 5550 3350
-F 0 "R404" H 5480 3304 50  0000 R CNN
+F 0 "R405" H 5480 3304 50  0000 R CNN
 F 1 "470" H 5480 3395 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5480 3350 50  0001 C CNN
 F 3 "~" H 5550 3350 50  0001 C CNN
@@ -195,10 +195,10 @@ F 7 "0" H 5550 3350 50  0001 C CNN "DNP"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R405
+L Device:R R404
 U 1 1 5E03459E
 P 5400 4000
-F 0 "R405" H 5330 3954 50  0000 R CNN
+F 0 "R404" H 5330 3954 50  0000 R CNN
 F 1 "10k" H 5330 4045 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5330 4000 50  0001 C CNN
 F 3 "~" H 5400 4000 50  0001 C CNN

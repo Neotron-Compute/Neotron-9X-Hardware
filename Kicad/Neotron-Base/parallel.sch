@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 5 10
 Title "Neotron Base - Parallel Port"
-Date "2020-08-07"
+Date "2020-08-15"
 Rev "[Uncontrolled]"
 Comp "github.com/neotron-compute"
 Comment1 "Copyright (c) Jonathan 'theJPster' Pallant 2020"
@@ -20,11 +20,11 @@ Text HLabel 2650 3400 0    50   Output ~ 0
 Text HLabel 4450 2300 0    50   Input ~ 0
 ~MCU_PAR_STROBE
 Text HLabel 2650 2900 0    50   Input ~ 0
-MCU_SPI_MOSI
+MCU_SPI_COPI
 Text HLabel 2650 3000 0    50   Output ~ 0
-MCU_SPI_MISO
+MCU_SPI_CIPO
 Text HLabel 2650 2800 0    50   Input ~ 0
-MSI_SPI_CLK
+MCU_SPI_CLK
 Text HLabel 2650 3600 0    50   Input ~ 0
 ~RESET
 $Comp
@@ -351,10 +351,10 @@ F 3 "" H 8350 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C501
+L Device:C C502
 U 1 1 5DFC954B
 P 8100 2800
-F 0 "C501" V 8200 2850 50  0000 L CNN
+F 0 "C502" V 8200 2850 50  0000 L CNN
 F 1 "22n" V 8200 2600 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 8138 2650 50  0001 C CNN
 F 3 "~" H 8100 2800 50  0001 C CNN
@@ -379,10 +379,10 @@ F 6 "0" H 8100 4200 50  0001 C CNN "DNP"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C502
+L Device:C C503
 U 1 1 5DFC8D43
 P 8100 3000
-F 0 "C502" V 8200 3050 50  0000 L CNN
+F 0 "C503" V 8200 3050 50  0000 L CNN
 F 1 "22n" V 8200 2800 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 8138 2850 50  0001 C CNN
 F 3 "~" H 8100 3000 50  0001 C CNN
@@ -393,10 +393,10 @@ F 6 "0" H 8100 3000 50  0001 C CNN "DNP"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C503
+L Device:C C504
 U 1 1 5DFC8AB4
 P 8100 3200
-F 0 "C503" V 8200 3250 50  0000 L CNN
+F 0 "C504" V 8200 3250 50  0000 L CNN
 F 1 "22n" V 8200 3000 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 8138 3050 50  0001 C CNN
 F 3 "~" H 8100 3200 50  0001 C CNN
@@ -407,10 +407,10 @@ F 6 "0" H 8100 3200 50  0001 C CNN "DNP"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C504
+L Device:C C505
 U 1 1 5DFC872D
 P 8100 3400
-F 0 "C504" V 8200 3450 50  0000 L CNN
+F 0 "C505" V 8200 3450 50  0000 L CNN
 F 1 "22n" V 8200 3200 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 8138 3250 50  0001 C CNN
 F 3 "~" H 8100 3400 50  0001 C CNN
@@ -482,8 +482,8 @@ U 1 1 5E01C54F
 P 1450 3450
 AR Path="/5DF1D0B0/5E01C54F" Ref="C?"  Part="1" 
 AR Path="/5DF626CD/5E01C54F" Ref="C?"  Part="1" 
-AR Path="/5F3C3642/5E01C54F" Ref="C505"  Part="1" 
-F 0 "C505" H 1565 3496 50  0000 L CNN
+AR Path="/5F3C3642/5E01C54F" Ref="C501"  Part="1" 
+F 0 "C501" H 1565 3496 50  0000 L CNN
 F 1 "100n" H 1565 3405 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 1488 3300 50  0001 C CNN
 F 3 "~" H 1450 3450 50  0001 C CNN
